@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/Compiled-CSS/css/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        title Password Generator
+    body
+        section.container
+            h2 Password Generator
+            .result-container
+                span#result
+                button.btn#clipboard
+                    i.fa-solid.fa-clipboard
+
+            .settings
+                .setting
+                    label Password Length
+                    input#length(type="number" min="4" max="20" value="20")
+
+                .setting
+                    label Include uppercase letters
+                    input#uppercase(type="checkbox" checked)
+
+                .setting
+                    label Include lowercase letters
+                    input#lowercase(type="checkbox" checked)
+
+                .setting
+                    label Include numbers letters
+                    input#numbers(type="checkbox" checked)
+
+                .setting
+                    label Include symbols letters
+                    input#symbols(type="checkbox" checked)
+
+            button.btn.btn-large#generate Generate Password
+
+        script(src="/script.js")
